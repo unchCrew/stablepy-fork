@@ -20,7 +20,7 @@ safetensors = ">=0.4.3"
 mediapy = ">=1.1.9"
 ipywidgets = "7.7.1"
 controlnet-aux = "0.0.6"
-mediapipe = ">=0.10.20"
+mediapipe = "0.9.0.1"  # Downgraded to a version compatible with numpy>=2.0.0
 pytorch-lightning = ">=2.0.9.post0"
 ultralytics = "<=8.3.48"
 huggingface_hub = ">=0.23.1"
@@ -30,8 +30,8 @@ onnxruntime = ">=1.18.0"
 insightface = ">=0.7.3"
 opencv-contrib-python = ">=4.8.0.76"
 sentencepiece = ">=0.1.99"
-numpy = ">=2.0.0,<3.0.0"  # Adjusted to satisfy thinc
-protobuf = ">=5.26.1,<6.0.0"  # Adjusted to satisfy ydf and grpcio-status
+numpy = ">=2.0.0,<3.0.0"  # Satisfies thinc and other dependencies
+protobuf = ">=5.26.1,<6.0.0"  # Satisfies ydf and grpcio-status
 lark = ">=1.1.5"
 spandrel = "0.3.4"
 spandrel-extra-arches = "0.1.1"
