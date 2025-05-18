@@ -2,14 +2,14 @@
 name = "stablepy"
 version = "0.6.1"
 description = "A tool for easy use of stable diffusion"
-authors = ["Roger Condori(R3gm) <rocondoriflores@gmail.com>"]
+authors = ["Roger Condori (R3gm) <rocondoriflores@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-torch = {version = "*", source = "pytorch-gpu-src"}
-torchvision = {version = "*", source = "pytorch-gpu-src"}
-torchaudio = {version = "*", source = "pytorch-gpu-src"}
+torch = { version = ">=2.0.0", source = "pytorch-gpu-src" }
+torchvision = { version = ">=0.15.0", source = "pytorch-gpu-src" }
+torchaudio = { version = ">=2.0.0", source = "pytorch-gpu-src" }
 omegaconf = ">=2.3.0"
 diffusers = "0.31.0"
 compel = "2.0.2"
@@ -20,7 +20,7 @@ safetensors = ">=0.4.3"
 mediapy = ">=1.1.9"
 ipywidgets = "7.7.1"
 controlnet-aux = "0.0.6"
-mediapipe = ">=0.10.5"
+mediapipe = ">=0.10.20"
 pytorch-lightning = ">=2.0.9.post0"
 ultralytics = "<=8.3.48"
 huggingface_hub = ">=0.23.1"
@@ -29,9 +29,10 @@ torchsde = ">=0.2.6"
 onnxruntime = ">=1.18.0"
 insightface = ">=0.7.3"
 opencv-contrib-python = ">=4.8.0.76"
-sentencepiece = "*"
-numpy = "<=1.26.4"
-lark = "*"
+sentencepiece = ">=0.1.99"
+numpy = ">=2.0.0,<3.0.0"  # Adjusted to satisfy thinc
+protobuf = ">=5.26.1,<6.0.0"  # Adjusted to satisfy ydf and grpcio-status
+lark = ">=1.1.5"
 spandrel = "0.3.4"
 spandrel-extra-arches = "0.1.1"
 facexlib = "0.3.0"
@@ -42,5 +43,5 @@ url = "https://download.pytorch.org/whl/cu121"
 priority = "explicit"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
